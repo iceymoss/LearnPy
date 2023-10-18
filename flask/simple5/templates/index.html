@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>index</title>
+        <meta name="Description", content="首先">
+        <meta name="Keywords", content="责任、关爱">
+
+    </head>
+    <body>
+        <div class="header">
+
+            <!-- 网页logo -->
+            <div class="loge">
+                <h1>欢迎来到首页！
+                    <p>
+                        {% if user %}
+                        姓名：{{user.name}} 年龄：{{user.age}} 现居：{{user.live}}
+                        {% endif %}}
+                    </p>
+                    <p>
+                        {% for Skill in user.Skill %}
+                        {{Skill}}
+                        {% endfor %}
+                    </p>
+                     <p>
+                        {% for Feature in user.Features %}
+                        {{Feature}}
+                        {% endfor %}
+                    </p>
+                </h1>
+            </div>
+        </div>
+    </body>
+</html>
